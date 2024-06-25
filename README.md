@@ -18,4 +18,10 @@ Regression testing can also be done by running `cargo bench -- --save-baseline <
     error: Unrecognized option: 'save-baseline'
     error: bench failed, to rerun pass `--lib`
 
+But next command does work:
+
+    cargo bench --bench my_benchmark -- --save-baseline inital
+
+This will create a folder target/criterion/factorial 20/initial with json files that contain the benchmark results.
+
 By passing `--baseline <name-of-baseline>` to next runs, they will be compared to this baseline.
